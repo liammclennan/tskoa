@@ -1,0 +1,40 @@
+{
+  "name": "tskoa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/ajv": "^1.0.0",
+    "ajv": "^6.1.1",
+    "koa": "^2.2.0",
+    "koa-basic-auth": "^2.0.0",
+    "koa-body": "^2.0.1",
+    "koa-compose": "^4.0.0",
+    "koa-csrf": "^3.0.6",
+    "koa-logger": "^3.0.0",
+    "koa-router": "^7.2.0",
+    "koa-session": "^5.0.0",
+    "koa-static": "^3.0.0",
+    "koa-views": "^6.0.2",
+    "typescript": "^2.7.1"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.44",
+    "@types/koa-router": "^7.0.27",
+    "@types/node": "^8.9.1",
+    "concurrently": "^3.5.1",
+    "eslint": "^3.8.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "nodemon": "^1.14.12"
+  },
+  "scripts": {
+    "watch": "concurrently --kill-others \"tsc -w\" \"nodemon ./index.js\" ",
+    "prestart": "tsc",
+    "start": "node index.js"
+  }
+}
